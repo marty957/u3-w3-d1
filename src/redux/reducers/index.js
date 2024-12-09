@@ -1,0 +1,19 @@
+const initialState = {
+  companies: {
+    content: []
+  }
+};
+
+const mainReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "ADD_TO_FAV":
+      return {
+        ...state,
+        companies: {
+          ...state.companies,
+          content: [...state.companies.content, action.payload]
+        }
+      };
+  }
+};
+export default mainReducer;

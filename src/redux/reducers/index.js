@@ -14,6 +14,8 @@ const mainReducer = (state = initialState, action) => {
           content: [...state.companies.content, action.payload]
         }
       };
+    default:
+      return state;
   }
 };
 export default mainReducer;

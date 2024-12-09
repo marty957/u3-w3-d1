@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Favourites = () => {
   const companies = useSelector((state) => state.companies.content);
@@ -12,7 +13,7 @@ const Favourites = () => {
         {companies.length > 0 ? (
           companies.map((company, i) => (
             <Col sm={12} key={i}>
-              {company}
+              <Link to={"/:company"}>{company}</Link>
             </Col>
           ))
         ) : (

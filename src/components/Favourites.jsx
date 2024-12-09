@@ -13,7 +13,7 @@ const Favourites = () => {
         {companies.length > 0 ? (
           companies.map((company, i) => (
             <Col sm={12} key={i}>
-              <Link to={"/:company"}>{company}</Link>
+              <Link to={`/${company}`}>{company}</Link>
             </Col>
           ))
         ) : (
